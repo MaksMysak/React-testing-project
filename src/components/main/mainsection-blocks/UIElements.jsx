@@ -14,26 +14,6 @@ const UIElements = () => {
       <div className="main-section-block-section">
         <div className="ui-main-section-block">
           <div className="ui-main-section-block-toggle-btn">
-            {/* <div class="container">
-                            <div class="toggle-btn" onClick="this.classList.toggle('active')">
-                                <div class="inner-circle"></div>
-                            </div>
-                    </div>
-                    <div class="container">
-                    <div class="toggle-btn" onClick="this.classList.toggle('active')">                                
-                            <div class="inner-circle"></div>
-                        </div>
-                    </div>
-                    <div class="container">
-                            <div class="toggle-btn" onClick="this.classList.toggle('active')">                                
-                                <div class="inner-circle"></div>
-                            </div>
-                    </div>
-                    <div class="container">
-                            <div class="toggle-btn" onClick="this.classList.toggle('active')">                                
-                                <div class="inner-circle"></div>
-                            </div>
-                    </div> */}
           </div>
           <div className="ui-main-section-block-sheck-btn" />
           <div className="ui-main-section-block-swich-btn" />
