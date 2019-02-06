@@ -8,19 +8,17 @@ import MediaTable from './mainsection-blocks/mediaTable';
 import UIElements from './mainsection-blocks/UIElements';
 import Buttons from './mainsection-blocks/buttons';
 
-const MainMainSection = () => {
-  return (
+const MainMainSection = () => (
     <div className="main-section">
-      <Section />
-      <PieChart />
-      <Message />
-      <Members />
-      <AlertMessage />
-      <MediaTable />
-      <UIElements />
-      <Buttons />
+        <Section />
+        <PieChart />
+        <Message />
+        <Members />
+        <AlertMessage />
+        <MediaTable />
+        <UIElements />
+        <Buttons />
     </div>
-  );
-};
+);
 
 export default MainMainSection;

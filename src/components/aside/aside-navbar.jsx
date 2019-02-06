@@ -5,26 +5,30 @@ import Qwer from '../../images/aside-navbar/qwer.png';
 import Mens from '../../images/aside-navbar/mens.png';
 
 const AsideNavbar = () => {
-  return (
-    <div className="aside-navbar">
-      <button className="aside-navbar-button" type="button">
-        <img
-          className="aside-navbar-button-img"
-          src={BackArrow}
-          alt="strilka"
-        />
-      </button>
-      <button className="aside-navbar-button" type="button">
-        <img className="aside-navbar-button-img" src={Lettter} alt="lettter" />
-      </button>
-      <button className="aside-navbar-button" type="button">
-        <img className="aside-navbar-button-img" src={Qwer} alt="qwer" />
-      </button>
-      <button className="aside-navbar-button" type="button">
-        <img className="aside-navbar-button-img" src={Mens} alt="mens" />
-      </button>
-    </div>
-  );
+    const butt = [
+        {
+            buttonImg: <img className="aside-navbar-button-img" src={BackArrow} alt="strilka" />,
+        },
+        {
+            buttonImg: <img className="aside-navbar-button-img" src={Lettter} alt="lettter" />,
+        },
+        {
+            buttonImg: <img className="aside-navbar-button-img" src={Qwer} alt="qwer" />,
+        },
+        {
+            buttonImg: <img className="aside-navbar-button-img" src={Mens} alt="mens" />,
+        },
+    ];
+
+    return (
+        <div className="aside-navbar">
+            {butt.map(button => (
+                <button className="aside-navbar-button" type="button">
+                    {button.buttonImg}
+                </button>
+            ))}
+        </div>
+    );
 };
 
 export default AsideNavbar;

@@ -5,31 +5,39 @@ import plane from '../../images/aside-info/plane.png';
 import eye from '../../images/aside-info/eye.png';
 
 const AsideInfo = () => {
-  return (
-    <div className="aside-info">
-      <img className="avatar" src={avatar} alt="avatar" />
-      <h5>Maksym Mysak</h5>
-      <h6>Admin Manager</h6>
-      <br />
-      <div className="aside-info-soc">
-        <div className="aside-info-soc-part">
-          <img src={men} alt="men" />
-          <h6>26k+</h6>
-          <p>+14</p>
+    const socPart = [
+        {
+            foto: <img src={men} alt="men" />,
+            firstRow: '26k+',
+            secondRow: '+14',
+        },
+        {
+            foto: <img src={plane} alt="plane" />,
+            firstRow: '1095',
+            secondRow: '+56',
+        },
+        {
+            foto: <img src={eye} alt="eye" />,
+            firstRow: '428',
+            secondRow: '+38',
+        },
+    ];
+    return (
+        <div className="aside-info">
+            <img className="avatar" src={avatar} alt="avatar" />
+            <h5>Maksym Mysak</h5>
+            <h6>Admin Manager</h6>
+            <div className="aside-info-soc">
+                {socPart.map(info => (
+                    <div className="aside-info-soc-part">
+                        {info.foto}
+                        <h6>{info.firstRow}</h6>
+                        <p>{info.secondRow}</p>
+                    </div>
+                ))}
+            </div>
         </div>
-        <div className="aside-info-soc-part">
-          <img src={plane} alt="plane" />
-          <h6>1095</h6>
-          <p>+56</p>
-        </div>
-        <div className="aside-info-soc-part">
-          <img src={eye} alt="eye" />
-          <h6>428</h6>
-          <p>+38</p>
-        </div>
-      </div>
-    </div>
-  );
+    );
 };
 
 export default AsideInfo;
