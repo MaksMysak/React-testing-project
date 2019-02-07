@@ -20,6 +20,7 @@ class UniHeader extends React.Component {
 }
 
 UniHeader.propTypes = {
+
     nameBlock: PropTypes.string,
     mainLeftIco: PropTypes.node,
     rightIco1: PropTypes.node,
@@ -32,4 +33,5 @@ UniHeader.defaultProps = {
     rightIco1: '',
     rightIco2: <FaTimes />,
 };
+
 export default UniHeader;
