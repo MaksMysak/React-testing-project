@@ -350,67 +350,68 @@ h5, h6{
     position: absolute;
 }
 
-label{
-    display: flex;
-    padding: 10%;
-    align-items: center;
-    height: 10vh;
-    color: #ffffff;
-	background: rgba(105,100,100,0.8);
-}	
+/* START OF COLLAPSIBLE MENU */
+            label{
+                display: flex;
+                padding: 10%;
+                align-items: center;
+                height: 10vh;
+                color: #ffffff;
+                background: rgba(105,100,100,0.8);
+            }	
 
-label p{
-    color: #ffffff;
-    margin-left: 5%;
-    margin-bottom: 0;
-}
+            label p{
+                color: #ffffff;
+                margin-left: 5%;
+                margin-bottom: 0;
+            }
 
-label p:hover{
-    margin-left: 5%;
-}
+            label p:hover{
+                margin-left: 5%;
+            }
 
-label:hover{
-    border-right:  5px solid #2980b9;
-}
+            label:hover{
+                border-right:  5px solid #2980b9;
+            }
 
-input:checked + label,
-input:checked + label:hover{
+            input:checked + label,
+            input:checked + label:hover{
 
-    padding-left: 10%;
-    border-right:  5px solid #2980b9;
-    background: rgba(105,100,100,0.8);
-    color: #ffffff
-}
+                padding-left: 10%;
+                border-right:  5px solid #2980b9;
+                background: rgba(105,100,100,0.8);
+                color: #ffffff
+            }
 
-label:hover:after,
- input:checked + label:hover:after{
-    content: '';
-    position: absolute;
-}
+            label:hover:after,
+            input:checked + label:hover:after{
+                content: '';
+                position: absolute;
+            }
 
-input{
-    display: none;
-}
+            input{
+                display: none;
+            }
 
-article{
-    background: rgba(43, 82, 133, 0.8);
-    color: #ffff;
-    height: 0px;
-	transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
-}
-input:checked ~ article{
-	transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
-    height: 100px;
-}
+            article{
+                background: rgba(43, 82, 133, 0.8);
+                color: #ffff;
+                height: 0px;
+                transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+            }
+            input:checked ~ article{
+                transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+                height: 100px;
+            }
 
-article p{
-   
-    color: rgb(255, 255, 255);
-    line-height: 23px;
-    font-size: 14px;
-    padding: 20px;
-}
-
+            article p{
+            
+                color: rgb(255, 255, 255);
+                line-height: 23px;
+                font-size: 14px;
+                padding: 20px;
+            }
+/* END OF COLLAPSIBLE MENU */
 
 .main-section{
     display: flex;

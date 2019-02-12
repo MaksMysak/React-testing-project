@@ -7,7 +7,7 @@ import eye from '../../images/aside-info/eye.png';
 const AsideInfo = () => {
     const socPart = [
         {
-            foto: <img src={men} alt="men" />,
+            fotoSrc: <img src={men} alt="men" />,
             firstRow: '26k+',
             secondRow: '+14',
         },
@@ -30,7 +30,7 @@ const AsideInfo = () => {
             <div className="aside-info-soc">
                 {socPart.map(info => (
                     <div className="aside-info-soc-part">
-                        {info.foto}
+                        <img src={men} alt="men" />
                         <h6>{info.firstRow}</h6>
                         <p>{info.secondRow}</p>
                     </div>

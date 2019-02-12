@@ -7,16 +7,20 @@ import Mens from '../../images/aside-navbar/mens.png';
 const AsideNavbar = () => {
     const butt = [
         {
-            buttonImg: <img className="aside-navbar-button-img" src={BackArrow} alt="strilka" />,
+            src: BackArrow,
+            alt: 'BackArrow',
         },
         {
-            buttonImg: <img className="aside-navbar-button-img" src={Lettter} alt="lettter" />,
+            src: Lettter,
+            alt: 'Lettter',
         },
         {
-            buttonImg: <img className="aside-navbar-button-img" src={Qwer} alt="qwer" />,
+            src: Qwer,
+            alt: 'qwer',
         },
         {
-            buttonImg: <img className="aside-navbar-button-img" src={Mens} alt="mens" />,
+            src: Mens,
+            alt: 'mens',
         },
     ];
 
@@ -24,7 +28,7 @@ const AsideNavbar = () => {
         <div className="aside-navbar">
             {butt.map(button => (
                 <button className="aside-navbar-button" type="button">
-                    {button.buttonImg}
+                    <img className="aside-navbar-button-img" src={button.src} alt={button.alt} />
                 </button>
             ))}
         </div>

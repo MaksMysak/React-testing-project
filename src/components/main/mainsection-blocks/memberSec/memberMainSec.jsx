@@ -14,7 +14,8 @@ const MemberMainSec = () => {
     const member = [
         {
             id: 'ac-1',
-            memberFoto: <img className="member-photo" src={paul} alt="paul" />,
+            memberFotoSrc: paul,
+            memberFotoAlt: 'paul',
             memberName: 'Paul Robert Smit',
             memberLoc: ' Manhathan, United State',
             memberIconDone: <FaRegCheckCircle size="24px" color="#00ff37" />,
@@ -22,9 +23,8 @@ const MemberMainSec = () => {
         },
         {
             id: 'ac-2',
-            memberFoto: (
-                <img className="member-photo" src={victoria} alt="victoria" />
-            ),
+            memberFotoSrc: victoria,
+            memberFotoAlt: 'victoria',
             memberName: 'Victoria Campel',
             memberLoc: 'Barcelona, Spain',
             memberIconDone: <FaRegCheckCircle size="24px" color="#00ff37" />,
@@ -34,7 +34,8 @@ const MemberMainSec = () => {
         },
         {
             id: 'ac-3',
-            memberFoto: <img className="member-photo" src={joseph} alt="joseph" />,
+            memberFotoSrc: joseph,
+            memberFotoAlt: 'joseph',
             memberName: 'Joseph Lewis',
             memberLoc: 'London, United Kingdom',
             memberIcon: <FaPlusCircle size="24px" />,
@@ -46,7 +47,7 @@ const MemberMainSec = () => {
             {member.map(row => (
                 <div className="members-main-block-section-row" key={row.id}>
                     <div className="members-main-block-section-row-pht">
-                        {row.memberFoto}
+                        <img className="member-photo" src={row.memberFotoSrc} alt={row.memberFotoAlt} />
                     </div>
                     <div className="members-main-block-section-row-txt">
                         <h4>{row.memberName}</h4>
