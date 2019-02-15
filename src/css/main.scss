@@ -289,6 +289,8 @@ h5, h6{
     justify-content: center;
     align-items: center;
     background-color: rgba(105,100,100,0.8);
+    // outline: none;
+    border: none;
 }
 
 .yes-tod:hover{
@@ -737,6 +739,10 @@ small{
     justify-content: center;
     align-items: center;
     background: rgba(105, 100, 100, 0.493);
+    border: none;
+    font: inherit;
+    color: inherit;
+
 }
 
 .members-block-section-buttons-but:hover{
@@ -757,14 +763,6 @@ small{
     padding: 3%;
     border-bottom: 1px solid rgba(255, 255, 255, 0.582);
     flex-wrap: wrap;
-}
-
-.members-main-block-section-row:nth-child(odd){
-    height: 25%;
-}
-
-.members-main-block-section-row:nth-child(2){
-    height: 50%;
 }
 
 .members-main-block-section-row-pht{
@@ -804,6 +802,13 @@ small{
     padding-left: 5%;
     padding-right: 5%;
     color: #ffffff;
+    & button{
+        background: none;
+        margin-left: 5px;
+        border: none;
+        font: inherit;
+        color: inherit;
+    }
 }
 
 .fa-check-circle{
@@ -816,6 +821,7 @@ small{
 }
 
 .members-main-block-section-row-rows{
+    margin-left: 25%;
     width: 75%;
 }
 

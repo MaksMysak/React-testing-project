@@ -7,7 +7,6 @@ const PieChartSvg = () => (
             viewBox="0 0 33.83098862 33.83098862"
             width="200"
             height="200"
-            xmlns="http://www.w3.org/2000/svg"
         >
             <circle
                 className="circle-chart__background"

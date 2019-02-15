@@ -2,72 +2,54 @@ import React from 'react';
 import {
     FaRegCheckCircle,
     FaPlusCircle,
-    FaRegArrowAltCircleUp,
+    // FaRegArrowAltCircleUp,
     FaMapMarkerAlt,
 } from 'react-icons/fa';
-import paul from '../../../../images/main-section/paul.png';
-import victoria from '../../../../images/main-section/victoria.png';
-import joseph from '../../../../images/main-section/joseph.png';
 import MemberRowRows from './memberRowRows';
 
-const MemberMainSec = () => {
-    const member = [
-        {
-            id: 'ac-1',
-            memberFotoSrc: paul,
-            memberFotoAlt: 'paul',
-            memberName: 'Paul Robert Smit',
-            memberLoc: ' Manhathan, United State',
-            memberIconDone: <FaRegCheckCircle size="24px" color="#00ff37" />,
-            memberIcon: <FaPlusCircle size="24px" />,
-        },
-        {
-            id: 'ac-2',
-            memberFotoSrc: victoria,
-            memberFotoAlt: 'victoria',
-            memberName: 'Victoria Campel',
-            memberLoc: 'Barcelona, Spain',
-            memberIconDone: <FaRegCheckCircle size="24px" color="#00ff37" />,
-            memberIcon: <FaRegArrowAltCircleUp size="24px" />,
-            memberNone: <div className="members-main-block-section-row-none" />,
-            memberRows: <MemberRowRows />,
-        },
-        {
-            id: 'ac-3',
-            memberFotoSrc: joseph,
-            memberFotoAlt: 'joseph',
-            memberName: 'Joseph Lewis',
-            memberLoc: 'London, United Kingdom',
-            memberIcon: <FaPlusCircle size="24px" />,
-        },
-    ];
+class MemberMainSec extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            data: JSON.parse(localStorage.getItem('data')),
+        };
+    }
 
-    return (
-        <div className="members-main-block-section">
-            {member.map(row => (
-                <div className="members-main-block-section-row" key={row.id}>
-                    <div className="members-main-block-section-row-pht">
-                        <img className="member-photo" src={row.memberFotoSrc} alt={row.memberFotoAlt} />
-                    </div>
-                    <div className="members-main-block-section-row-txt">
-                        <h4>{row.memberName}</h4>
-                        <div>
-                            <FaMapMarkerAlt />
-                            <p>
-                                <small>{row.memberLoc}</small>
-                            </p>
+    render() {
+        const { data } = this.state;
+        return (
+            <div className="members-main-block-section">
+                {data.users.map(({
+                    id, photo, name, location, memberRows,
+                }) => (
+                    <div className="members-main-block-section-row" key={id}>
+                        <div className="members-main-block-section-row-pht">
+                            <img className="member-photo" src={photo} alt={photo} />
                         </div>
+                        <div className="members-main-block-section-row-txt">
+                            <h4>{name}</h4>
+                            <div>
+                                <FaMapMarkerAlt />
+                                <p>
+                                    <small>{location}</small>
+                                </p>
+                            </div>
+                        </div>
+                        <div className="members-main-block-section-row-icn">
+                            <FaRegCheckCircle size="24px" color="#00ff37" />
+                            <button
+                                type="button"
+                                onClick={this.handleClick}
+                            >
+                                <FaPlusCircle size="24px" color="#fff" />
+                            </button>
+                        </div>
+                        { memberRows && <MemberRowRows />}
                     </div>
-                    <div className="members-main-block-section-row-icn">
-                        {row.memberIconDone}
-                        {row.memberIcon}
-                    </div>
-                    {row.memberNone}
-                    {row.memberRows}
-                </div>
-            ))}
-        </div>
-    );
-};
+                ))}
+            </div>
+        );
+    }
+}
 
 export default MemberMainSec;

@@ -36,12 +36,10 @@ const Members = () => {
                         </h6>
                         <h6>184,036</h6>
                     </div>
-                    <div className="members-block-section-buttons-but">
-                        <h6>
-                            <small>Sort by</small>
-                        </h6>
+                    <button className="members-block-section-buttons-but" type="button">
+                        <h6>Sort by</h6>
                         <i className="fas fa-arrow-down" />
-                    </div>
+                    </button>
                 </div>
                 <MemberMainSec />
                 <div className="members-main-block-section-bottom-btn">

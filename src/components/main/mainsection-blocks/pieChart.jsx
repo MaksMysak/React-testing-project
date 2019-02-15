@@ -3,69 +3,62 @@ import { FaUndo, FaTimes, FaChartPie } from 'react-icons/fa';
 import PieChartSvg from './PieChartSVG';
 import UniHeader from './UniHeader';
 
-const PieChart = () => {
-    const smallSvgs = [
-        {
-            color: 'rgba(0, 171, 255, 1)',
-            percent: '43%',
-            text: 'Members',
-        },
-        {
-            color: 'rgba(81, 238, 7, 1)',
-            percent: '36%',
-            text: 'uderss',
-        },
-        {
-            color: 'rgba(241, 5, 5, 1)',
-            percent: '21%',
-            text: 'Guests',
-        },
-    ];
-    return (
-        <div className="main-section-block">
-            <UniHeader
-                mainLeftIco={<FaChartPie size="24px" />}
-                nameBlock="Pie Chart"
-                rightIco1={<FaUndo />}
-                rightIco2={<FaTimes />}
-            />
-            <div className="main-section-block-section">
-                <div className="piechart-main-section-number">
-                    <h6>6,184</h6>
-                    <h6>
-                        <small>Total Balance</small>
-                    </h6>
-                </div>
-                <div className="piechart-main-section-piechart">
-                    <PieChartSvg />
-                    <div className="piechart-txt">
-                        {smallSvgs.map(svgs => (
-                            <div>
-                                <div className="piechart-svg">
-                                    <svg height="40" width="40">
-                                        <circle
-                                            cx="20"
-                                            cy="20"
-                                            r="14"
-                                            stroke={svgs.color}
-                                            strokeWidth="3"
-                                            fill="none"
-                                        />
-                                    </svg>
+class PieChart extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            data: JSON.parse(localStorage.getItem('data')),
+        };
+    }
+
+    render() {
+        const { data } = this.state;
+        return (
+            <div className="main-section-block">
+                <UniHeader
+                    mainLeftIco={<FaChartPie size="24px" />}
+                    nameBlock="Pie Chart"
+                    rightIco1={<FaUndo />}
+                    rightIco2={<FaTimes />}
+                />
+                <div className="main-section-block-section">
+                    <div className="piechart-main-section-number">
+                        <h6>6,184</h6>
+                        <h6>
+                            <small>Total Balance</small>
+                        </h6>
+                    </div>
+                    <div className="piechart-main-section-piechart">
+                        <PieChartSvg />
+                        <div className="piechart-txt">
+                            {data.smallSvgInPieChartBlock.map(({ color, percent, text }) => (
+                                <div>
+                                    <div className="piechart-svg">
+                                        <svg height="40" width="40">
+                                            <circle
+                                                cx="20"
+                                                cy="20"
+                                                r="14"
+                                                stroke={color}
+                                                strokeWidth="3"
+                                                fill="none"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <div className="piechart-svg-txt">
+                                        <p>
+                                            <b>{percent}</b>
+                                        </p>
+                                        <p>{text}</p>
+                                    </div>
                                 </div>
-                                <div className="piechart-svg-txt">
-                                    <p>
-                                        <b>{svgs.percent}</b>
-                                    </p>
-                                    <p>{svgs.text}</p>
-                                </div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    );
-};
+        );
+    }
+}
 
 export default PieChart;
