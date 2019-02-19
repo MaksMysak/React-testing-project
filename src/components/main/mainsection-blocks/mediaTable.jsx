@@ -1,7 +1,8 @@
+/* eslint-disable import/no-unresolved */
 import React from 'react';
 import { FaTable, FaTimes } from 'react-icons/fa';
-import UniHeader from './UniHeader';
-import MediaTableMainSection from './mediaTableMainSection';
+import UniHeader from '@uniHeader/UniHeader';
+import MediaTableMainSection from '@mainBlocks/mediaTableMainSection';
 
 const MediaTable = () => {
     const titl = [

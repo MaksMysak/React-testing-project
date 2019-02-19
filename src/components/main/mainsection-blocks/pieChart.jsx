@@ -1,7 +1,8 @@
+/* eslint-disable import/no-unresolved */
 import React from 'react';
 import { FaUndo, FaTimes, FaChartPie } from 'react-icons/fa';
-import PieChartSvg from './PieChartSVG';
-import UniHeader from './UniHeader';
+import PieChartSvg from '@components/main/mainsection-blocks/PieChartSVG';
+import UniHeader from '@uniHeader/UniHeader';
 
 const PieChart = () => {
     const smallSvgs = [

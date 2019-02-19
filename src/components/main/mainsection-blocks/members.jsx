@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import React from 'react';
 import {
     FaUndo,
@@ -6,7 +7,7 @@ import {
     FaPlus,
     FaUserAlt,
 } from 'react-icons/fa';
-import UniHeader from './UniHeader';
+import UniHeader from '@uniHeader/UniHeader';
 import MemberMainSec from './memberSec/memberMainSec';
 
 const Members = () => {

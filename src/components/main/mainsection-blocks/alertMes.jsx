@@ -1,6 +1,7 @@
+/* eslint-disable import/no-unresolved */
 import React from 'react';
 import { FaUndo, FaCommentAlt } from 'react-icons/fa';
-import UniHeader from './UniHeader';
+import UniHeader from '@uniHeader/UniHeader';
 import AlertMesSec from './alertMessageSec/alertMainSec';
 
 const AlertMessage = () => (

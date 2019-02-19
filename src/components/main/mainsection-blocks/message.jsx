@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import React from 'react';
 import {
     FaComments,
@@ -6,8 +7,8 @@ import {
     FaArrowUp,
     FaPencilAlt,
 } from 'react-icons/fa';
+import UniHeader from '@uniHeader/UniHeader';
 import MesMainSec from './messageSec/messageMainBlockSec';
-import UniHeader from './UniHeader';
 
 const Message = () => {
     const buttons = [

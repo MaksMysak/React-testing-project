@@ -1,10 +1,11 @@
+/* eslint-disable import/no-unresolved */
 /* eslint-disable max-len */
 import React from 'react';
-import MessButtonBlock from './messButtonBlock';
+import robert from '@image/main-section/robert.png';
+import victoria from '@image/main-section/victoria.png';
+import joseph from '@image/main-section/joseph.png';
 import MessAdmin from './messAdminMes';
-import robert from '../../../../images/main-section/robert.png';
-import victoria from '../../../../images/main-section/victoria.png';
-import joseph from '../../../../images/main-section/joseph.png';
+import MessButtonBlock from './messButtonBlock';
 
 const MesMainSec = () => {
     const message = [

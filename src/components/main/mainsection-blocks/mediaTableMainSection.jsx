@@ -1,8 +1,9 @@
+/* eslint-disable import/no-unresolved */
 import React from 'react';
 import { FaMinusCircle } from 'react-icons/fa';
-import gravityPsd from '../../../images/main-section/IMG1.jpg';
-import psdFoil from '../../../images/main-section/IMG2.jpg';
-import woodLogo from '../../../images/main-section/IMG3.jpg';
+import gravityPsd from '@image/main-section/IMG1.jpg';
+import psdFoil from '@image/main-section/IMG2.jpg';
+import woodLogo from '@image/main-section/IMG3.jpg';
 
 const MediaTableMainSection = () => {
     const row = [

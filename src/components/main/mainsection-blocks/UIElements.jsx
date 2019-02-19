@@ -1,6 +1,7 @@
+/* eslint-disable import/no-unresolved */
 import React from 'react';
 import { FaTimes, FaUndo, FaSlidersH } from 'react-icons/fa';
-import UniHeader from './UniHeader';
+import UniHeader from '@uniHeader/UniHeader';
 
 const UIElements = () => (
     <div className="main-section-block">

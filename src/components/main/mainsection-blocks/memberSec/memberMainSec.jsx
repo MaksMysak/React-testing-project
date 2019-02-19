@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import React from 'react';
 import {
     FaRegCheckCircle,
@@ -5,9 +6,9 @@ import {
     FaRegArrowAltCircleUp,
     FaMapMarkerAlt,
 } from 'react-icons/fa';
-import paul from '../../../../images/main-section/paul.png';
-import victoria from '../../../../images/main-section/victoria.png';
-import joseph from '../../../../images/main-section/joseph.png';
+import paul from '@image/main-section/paul.png';
+import victoria from '@image/main-section/victoria.png';
+import joseph from '@image/main-section/joseph.png';
 import MemberRowRows from './memberRowRows';
 
 const MemberMainSec = () => {

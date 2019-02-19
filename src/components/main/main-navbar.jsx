@@ -1,7 +1,8 @@
+/* eslint-disable import/no-unresolved */
 import React from 'react';
-import arrow from '../../images/main navbar/arrow.png';
+import arrow from '@image/main navbar/arrow.png';
 
-const MainNavbar = () => (
+export const MainNavbar = () => (
     <div className="main-navbar">
         <div clas="main-navbar-open-aside" />
         <div className="search-box">

@@ -351,7 +351,7 @@ h5, h6{
 }
 
 /* START OF COLLAPSIBLE MENU */
-            label{
+            .collapsible-header{
                 display: flex;
                 padding: 10%;
                 align-items: center;
@@ -360,22 +360,22 @@ h5, h6{
                 background: rgba(105,100,100,0.8);
             }	
 
-            label p{
+            .collapsible-header h3{
                 color: #ffffff;
                 margin-left: 5%;
                 margin-bottom: 0;
             }
 
-            label p:hover{
+            .collapsible-header h3:hover{
                 margin-left: 5%;
             }
 
-            label:hover{
+            .collapsible-header:hover{
                 border-right:  5px solid #2980b9;
             }
 
-            input:checked + label,
-            input:checked + label:hover{
+            .collapsible-header:checked,
+            .collapsible-header:checked :hover{
 
                 padding-left: 10%;
                 border-right:  5px solid #2980b9;
@@ -383,33 +383,18 @@ h5, h6{
                 color: #ffffff
             }
 
-            label:hover:after,
-            input:checked + label:hover:after{
-                content: '';
-                position: absolute;
-            }
-
-            input{
-                display: none;
-            }
-
-            article{
+            .collapsible-panel{
                 background: rgba(43, 82, 133, 0.8);
                 color: #ffff;
-                height: 0px;
-                transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
-            }
-            input:checked ~ article{
-                transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
                 height: 100px;
             }
 
-            article p{
-            
-                color: rgb(255, 255, 255);
-                line-height: 23px;
-                font-size: 14px;
-                padding: 20px;
+            .aside-menu{
+                &.is-expended{
+                    .panel-body{
+                        display: block;
+                    }
+                }
             }
 /* END OF COLLAPSIBLE MENU */
 
