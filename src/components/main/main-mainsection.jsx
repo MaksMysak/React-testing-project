@@ -1,26 +1,31 @@
+/* eslint-disable react/prefer-stateless-function */
+/* eslint-disable import/no-unresolved */
 import React from 'react';
-import Section from './mainsection-blocks/section';
-import PieChart from './mainsection-blocks/pieChart';
-import Message from './mainsection-blocks/message';
-import Members from './mainsection-blocks/members';
-import AlertMessage from './mainsection-blocks/alertMes';
-import MediaTable from './mainsection-blocks/mediaTable';
-import UIElements from './mainsection-blocks/UIElements';
-import Buttons from './mainsection-blocks/buttons';
+import Section from '@mainBlocks/section';
+import PieChart from '@mainBlocks/pieChart';
+import Message from '@mainBlocks/message';
+import Members from '@mainBlocks/members';
+import AlertMessage from '@mainBlocks/alertMes';
+import MediaTable from '@mainBlocks/mediaTable';
+import UIElements from '@mainBlocks/UIElements';
+import Buttons from '@mainBlocks/buttons';
 
-const MainMainSection = () => {
-  return (
-    <div className="main-section">
-      <Section />
-      <PieChart />
-      <Message />
-      <Members />
-      <AlertMessage />
-      <MediaTable />
-      <UIElements />
-      <Buttons />
-    </div>
-  );
-};
+
+class MainMainSection extends React.Component {
+    render() {
+        return (
+            <div className="main-section">
+                <Section />
+                <PieChart />
+                <Message />
+                <Members />
+                <AlertMessage />
+                <MediaTable />
+                <UIElements />
+                <Buttons />
+            </div>
+        );
+    }
+}
 
 export default MainMainSection;

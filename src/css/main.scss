@@ -266,15 +266,18 @@ h5, h6{
 
 .items:nth-child(3){ 
     display: flex;
-    width: 34%;
+    width: 300px;
     height: 10vh;
     margin-top: 1%;
-    justify-content: space-between;
-    padding-left: 20px;
-    padding-right: 20px;
+    justify-content: center;
+   // padding-right: 5%;
     align-items: center; 
     background-color: rgba(105,100,100,0.8);
     margin-left: 2%;
+    & h4{
+        margin-right: 5px;
+        margin-left: 5px;
+    }
 }
 
 .dashboard-smalltext{
@@ -283,7 +286,7 @@ h5, h6{
     height: 80%;
 }
 
-.yes-tod{
+.yesTod{
     display: flex;
     width: 50%;
     justify-content: center;
@@ -291,7 +294,7 @@ h5, h6{
     background-color: rgba(105,100,100,0.8);
 }
 
-.yes-tod:hover{
+.yesTod:hover{
     background-color: rgba(78, 78, 78, 0.8);
 }
 
@@ -350,67 +353,53 @@ h5, h6{
     position: absolute;
 }
 
-label{
-    display: flex;
-    padding: 10%;
-    align-items: center;
-    height: 10vh;
-    color: #ffffff;
-	background: rgba(105,100,100,0.8);
-}	
+/* START OF COLLAPSIBLE MENU */
+            .collapsible-header{
+                display: flex;
+                padding: 10%;
+                align-items: center;
+                height: 10vh;
+                color: #ffffff;
+                background: rgba(105,100,100,0.8);
+            }	
 
-label p{
-    color: #ffffff;
-    margin-left: 5%;
-    margin-bottom: 0;
-}
+            .collapsible-header h3{
+                color: #ffffff;
+                margin-left: 5%;
+                margin-bottom: 0;
+            }
 
-label p:hover{
-    margin-left: 5%;
-}
+            .collapsible-header h3:hover{
+                margin-left: 5%;
+            }
 
-label:hover{
-    border-right:  5px solid #2980b9;
-}
+            .collapsible-header:hover{
+                border-right:  5px solid #2980b9;
+            }
 
-input:checked + label,
-input:checked + label:hover{
+            .collapsible-header:checked,
+            .collapsible-header:checked :hover{
 
-    padding-left: 10%;
-    border-right:  5px solid #2980b9;
-    background: rgba(105,100,100,0.8);
-    color: #ffffff
-}
+                padding-left: 10%;
+                border-right:  5px solid #2980b9;
+                background: rgba(105,100,100,0.8);
+                color: #ffffff
+            }
 
-label:hover:after,
- input:checked + label:hover:after{
-    content: '';
-    position: absolute;
-}
+            .collapsible-panel{
+                background: rgba(43, 82, 133, 0.8);
+                color: #ffff;
+                height: 100px;
+            }
 
-input{
-    display: none;
-}
-
-article{
-    background: rgba(43, 82, 133, 0.8);
-    color: #ffff;
-    height: 0px;
-	transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
-}
-input:checked ~ article{
-	transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
-    height: 100px;
-}
-
-article p{
-   
-    color: rgb(255, 255, 255);
-    line-height: 23px;
-    font-size: 14px;
-    padding: 20px;
-}
-
+            .aside-menu{
+                &.is-expended{
+                    .panel-body{
+                        display: block;
+                    }
+                }
+            }
+/* END OF COLLAPSIBLE MENU */
 
 .main-section{
     display: flex;

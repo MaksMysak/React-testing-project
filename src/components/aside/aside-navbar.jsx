@@ -1,30 +1,39 @@
+/* eslint-disable import/no-unresolved */
 import React from 'react';
-import BackArrow from '../../images/aside-navbar/back-arrow.png';
-import Lettter from '../../images/aside-navbar/lettter.png';
-import Qwer from '../../images/aside-navbar/qwer.png';
-import Mens from '../../images/aside-navbar/mens.png';
+import BackArrow from '@image/aside-navbar/back-arrow.png';
+import Lettter from '@image/aside-navbar/lettter.png';
+import Qwer from '@image/aside-navbar/qwer.png';
+import Men from '@image/aside-navbar/men.png';
 
 const AsideNavbar = () => {
-  return (
-    <div className="aside-navbar">
-      <button className="aside-navbar-button" type="button">
-        <img
-          className="aside-navbar-button-img"
-          src={BackArrow}
-          alt="strilka"
-        />
-      </button>
-      <button className="aside-navbar-button" type="button">
-        <img className="aside-navbar-button-img" src={Lettter} alt="lettter" />
-      </button>
-      <button className="aside-navbar-button" type="button">
-        <img className="aside-navbar-button-img" src={Qwer} alt="qwer" />
-      </button>
-      <button className="aside-navbar-button" type="button">
-        <img className="aside-navbar-button-img" src={Mens} alt="mens" />
-      </button>
-    </div>
-  );
+    const butt = [
+        {
+            src: BackArrow,
+            alt: 'BackArrow',
+        },
+        {
+            src: Lettter,
+            alt: 'Lettter',
+        },
+        {
+            src: Qwer,
+            alt: 'qwer',
+        },
+        {
+            src: Men,
+            alt: 'men',
+        },
+    ];
+
+    return (
+        <div className="aside-navbar">
+            {butt.map(({ src, alt }) => (
+                <button className="aside-navbar-button" type="button">
+                    <img className="aside-navbar-button-img" src={src} alt={alt} />
+                </button>
+            ))}
+        </div>
+    );
 };
 
 export default AsideNavbar;
