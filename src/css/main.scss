@@ -1,6 +1,3 @@
-
-
-
 *{
     margin: 0;
     padding: 0;
@@ -9,18 +6,6 @@
     text-decoration: none;
     outline: none;
 }
- 
-/* .message p{
-    font-size: 13px;
-} */
-
-/* .message-photo{
-    width: 80%;
-}
-
-.member-photo{
-    width: 80%;
-} */
 
 p{
     color: rgb(4, 250, 17);
@@ -289,6 +274,8 @@ h5, h6{
     justify-content: center;
     align-items: center;
     background-color: rgba(105,100,100,0.8);
+    // outline: none;
+    border: none;
 }
 
 .yes-tod:hover{
@@ -350,67 +337,68 @@ h5, h6{
     position: absolute;
 }
 
-label{
-    display: flex;
-    padding: 10%;
-    align-items: center;
-    height: 10vh;
-    color: #ffffff;
-	background: rgba(105,100,100,0.8);
-}	
+/* START OF COLLAPSIBLE MENU */
+            label{
+                display: flex;
+                padding: 10%;
+                align-items: center;
+                height: 10vh;
+                color: #ffffff;
+                background: rgba(105,100,100,0.8);
+            }	
 
-label p{
-    color: #ffffff;
-    margin-left: 5%;
-    margin-bottom: 0;
-}
+            label p{
+                color: #ffffff;
+                margin-left: 5%;
+                margin-bottom: 0;
+            }
 
-label p:hover{
-    margin-left: 5%;
-}
+            label p:hover{
+                margin-left: 5%;
+            }
 
-label:hover{
-    border-right:  5px solid #2980b9;
-}
+            label:hover{
+                border-right:  5px solid #2980b9;
+            }
 
-input:checked + label,
-input:checked + label:hover{
+            input:checked + label,
+            input:checked + label:hover{
 
-    padding-left: 10%;
-    border-right:  5px solid #2980b9;
-    background: rgba(105,100,100,0.8);
-    color: #ffffff
-}
+                padding-left: 10%;
+                border-right:  5px solid #2980b9;
+                background: rgba(105,100,100,0.8);
+                color: #ffffff
+            }
 
-label:hover:after,
- input:checked + label:hover:after{
-    content: '';
-    position: absolute;
-}
+            label:hover:after,
+            input:checked + label:hover:after{
+                content: '';
+                position: absolute;
+            }
 
-input{
-    display: none;
-}
+            input{
+                display: none;
+            }
 
-article{
-    background: rgba(43, 82, 133, 0.8);
-    color: #ffff;
-    height: 0px;
-	transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
-}
-input:checked ~ article{
-	transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
-    height: 100px;
-}
+            article{
+                background: rgba(43, 82, 133, 0.8);
+                color: #ffff;
+                height: 0px;
+                transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+            }
+            input:checked ~ article{
+                transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+                height: 100px;
+            }
 
-article p{
-   
-    color: rgb(255, 255, 255);
-    line-height: 23px;
-    font-size: 14px;
-    padding: 20px;
-}
-
+            article p{
+            
+                color: rgb(255, 255, 255);
+                line-height: 23px;
+                font-size: 14px;
+                padding: 20px;
+            }
+/* END OF COLLAPSIBLE MENU */
 
 .main-section{
     display: flex;
@@ -736,6 +724,10 @@ small{
     justify-content: center;
     align-items: center;
     background: rgba(105, 100, 100, 0.493);
+    border: none;
+    font: inherit;
+    color: inherit;
+
 }
 
 .members-block-section-buttons-but:hover{
@@ -756,14 +748,6 @@ small{
     padding: 3%;
     border-bottom: 1px solid rgba(255, 255, 255, 0.582);
     flex-wrap: wrap;
-}
-
-.members-main-block-section-row:nth-child(odd){
-    height: 25%;
-}
-
-.members-main-block-section-row:nth-child(2){
-    height: 50%;
 }
 
 .members-main-block-section-row-pht{
@@ -803,6 +787,13 @@ small{
     padding-left: 5%;
     padding-right: 5%;
     color: #ffffff;
+    & button{
+        background: none;
+        margin-left: 5px;
+        border: none;
+        font: inherit;
+        color: inherit;
+    }
 }
 
 .fa-check-circle{
@@ -815,6 +806,7 @@ small{
 }
 
 .members-main-block-section-row-rows{
+    margin-left: 25%;
     width: 75%;
 }
 
