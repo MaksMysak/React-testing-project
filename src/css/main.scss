@@ -266,15 +266,18 @@ h5, h6{
 
 .items:nth-child(3){ 
     display: flex;
-    width: 34%;
+    width: 300px;
     height: 10vh;
     margin-top: 1%;
-    justify-content: space-between;
-    padding-left: 20px;
-    padding-right: 20px;
+    justify-content: center;
+   // padding-right: 5%;
     align-items: center; 
     background-color: rgba(105,100,100,0.8);
     margin-left: 2%;
+    & h4{
+        margin-right: 5px;
+        margin-left: 5px;
+    }
 }
 
 .dashboard-smalltext{
@@ -283,7 +286,7 @@ h5, h6{
     height: 80%;
 }
 
-.yes-tod{
+.yesTod{
     display: flex;
     width: 50%;
     justify-content: center;
@@ -291,7 +294,7 @@ h5, h6{
     background-color: rgba(105,100,100,0.8);
 }
 
-.yes-tod:hover{
+.yesTod:hover{
     background-color: rgba(78, 78, 78, 0.8);
 }
 

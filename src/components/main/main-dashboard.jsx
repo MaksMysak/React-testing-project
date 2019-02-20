@@ -25,29 +25,49 @@ const MainDashboard = () => {
             percent: '+25%',
         },
     ];
+
+    const items = [
+        {
+            dashIcon: <FaHome size="50px" />,
+            classDashTxt: 'dashboard-txt',
+            dashTxt: 'Dashboard',
+            classDashSmallTxt: 'dashboard-smalltext',
+            dashSmallTxt: 'Home Dashboard',
+        },
+        {
+            nameOfClass: 'yesTod',
+            todTxt: 'Today',
+            yesTxt: 'Yesterday',
+        },
+        {
+            calendarIcon: <FaCalendarAlt />,
+            arrowIcon: <FaArrowDown />,
+            date: 'February 26, 2014',
+        },
+    ];
     return (
         <div className="main-dashboard">
             <div className="main-dashboard-item">
-                <div className="items">
-                    <FaHome size="50px" />
-                    <h1 className="dashboard-txt">Dashboard</h1>
-                    <div className="dashboard-smalltext">
-                        <h6>Home Dashboard</h6>
+                {items.map(({
+                    dashIcon, classDashTxt, dashTxt, classDashSmallTxt, dashSmallTxt, nameOfClass, yesTxt, todTxt, calendarIcon, arrowIcon, date,
+                }) => (
+                    <div className="items">
+                        {dashIcon}
+                        <h1 className={classDashTxt}>{dashTxt}</h1>
+                        <div className={classDashSmallTxt}>
+                            <h6>{dashSmallTxt}</h6>
+                        </div>
+                        <div className={nameOfClass}>
+                            <h5>{todTxt}</h5>
+                        </div>
+                        <div className={nameOfClass}>
+                            <h5>{yesTxt}</h5>
+                        </div>
+                        {calendarIcon}
+                        <h4>{date}</h4>
+                        {arrowIcon}
                     </div>
-                </div>
-                <div className="items">
-                    <div className="yes-tod">
-                        <h5>Today</h5>
-                    </div>
-                    <div className="yes-tod">
-                        <h5>Yesterday</h5>
-                    </div>
-                </div>
-                <div className="items">
-                    <FaCalendarAlt />
-                    <h5>February 26, 2014</h5>
-                    <FaArrowDown />
-                </div>
+                ))}
             </div>
             <div className="main-dashboard-item">
                 <div className="item">
