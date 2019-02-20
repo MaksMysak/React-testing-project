@@ -1,8 +1,9 @@
+/* eslint-disable import/no-unresolved */
 import React from 'react';
-import BackArrow from '../../images/aside-navbar/back-arrow.png';
-import Lettter from '../../images/aside-navbar/lettter.png';
-import Qwer from '../../images/aside-navbar/qwer.png';
-import Mens from '../../images/aside-navbar/mens.png';
+import BackArrow from '@image/aside-navbar/back-arrow.png';
+import Lettter from '@image/aside-navbar/lettter.png';
+import Qwer from '@image/aside-navbar/qwer.png';
+import Men from '@image/aside-navbar/men.png';
 
 const AsideNavbar = () => {
     const butt = [
@@ -19,16 +20,16 @@ const AsideNavbar = () => {
             alt: 'qwer',
         },
         {
-            src: Mens,
-            alt: 'mens',
+            src: Men,
+            alt: 'men',
         },
     ];
 
     return (
         <div className="aside-navbar">
-            {butt.map(button => (
+            {butt.map(({ src, alt }) => (
                 <button className="aside-navbar-button" type="button">
-                    <img className="aside-navbar-button-img" src={button.src} alt={button.alt} />
+                    <img className="aside-navbar-button-img" src={src} alt={alt} />
                 </button>
             ))}
         </div>

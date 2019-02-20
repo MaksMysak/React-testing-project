@@ -1,3 +1,4 @@
+/* eslint-disable react/prefer-stateless-function */
 /* eslint-disable import/no-unresolved */
 import React from 'react';
 import Section from '@mainBlocks/section';
@@ -9,17 +10,22 @@ import MediaTable from '@mainBlocks/mediaTable';
 import UIElements from '@mainBlocks/UIElements';
 import Buttons from '@mainBlocks/buttons';
 
-const MainMainSection = () => (
-    <div className="main-section">
-        <Section />
-        <PieChart />
-        <Message />
-        <Members />
-        <AlertMessage />
-        <MediaTable />
-        <UIElements />
-        <Buttons />
-    </div>
-);
+
+class MainMainSection extends React.Component {
+    render() {
+        return (
+            <div className="main-section">
+                <Section />
+                <PieChart />
+                <Message />
+                <Members />
+                <AlertMessage />
+                <MediaTable />
+                <UIElements />
+                <Buttons />
+            </div>
+        );
+    }
+}
 
 export default MainMainSection;

@@ -20,58 +20,55 @@ class AsideMenu extends React.Component {
 
     handleToggle = e => {
         const { isExpanded } = this.state;
-        if (isExpanded !== e.currentTarget.id) {
-            this.setState({ isExpanded: e.currentTarget.id });
-        } else {
-            this.setState({ isExpanded: 'null' });
-        }
-        console.log(this.state);
+        this.state = { isExpanded: {} }; const { currentTarget: { id } } = e;
+        this.setState({ isExpanded: { ...isExpanded, [id]: !isExpanded[id] } });
+        console.log(isExpanded);
     }
 
     render() {
         const rows = [
             {
-                id: 'ac-1',
+                id: '1',
                 imgUrl: <FaHome />,
                 labelText: 'Dashboard',
             },
             {
-                id: 'ac-2',
+                id: '2',
                 imgUrl: <FaSlidersH />,
                 labelText: 'UI Elements',
             },
             {
-                id: 'ac-3',
+                id: '3',
                 imgUrl: <FaCommentAlt />,
                 labelText: 'Simple Pages',
             },
             {
-                id: 'ac-4',
+                id: '4',
                 imgUrl: <FaComments />,
                 labelText: 'Messages',
             },
             {
-                id: 'ac-5',
+                id: '5',
                 imgUrl: <FaEdit />,
                 labelText: 'Forms',
             },
             {
-                id: 'ac-6',
+                id: '6',
                 imgUrl: <FaTh />,
                 labelText: 'Grid Layout',
             },
             {
-                id: 'ac-7',
+                id: '7',
                 imgUrl: <FaTable />,
                 labelText: 'Tables',
             },
             {
-                id: 'ac-8',
+                id: '8',
                 imgUrl: <FaChartBar />,
                 labelText: 'Satatistics',
             },
             {
-                id: 'ac-9',
+                id: '9',
                 imgUrl: <FaCog />,
                 labelText: 'Support',
             },
@@ -94,7 +91,7 @@ class AsideMenu extends React.Component {
                         {imgUrl}
                         <h3>{labelText}</h3>
                     </div>
-                    { isExpanded === id && (
+                    { isExpanded[id] && (
                         <div className="collapsible-panel">
                             <div className="panel-body" />
                         </div>
