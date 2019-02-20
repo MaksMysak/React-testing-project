@@ -2,7 +2,6 @@ import React from 'react';
 import './css/main.scss';
 import Aside from './components/aside';
 import Main from './components/main';
-import './dataLocalStorage';
 
 const App = () => (
     <div className="App">

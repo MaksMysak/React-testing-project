@@ -6,20 +6,14 @@ import {
     FaMapMarkerAlt,
 } from 'react-icons/fa';
 import MemberRowRows from './memberRowRows';
+import { getStorageItem } from '../../../../dataLocalStorage';
 
 class MemberMainSec extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            data: JSON.parse(localStorage.getItem('data')),
-        };
-    }
-
     render() {
-        const { data } = this.state;
+        const users = getStorageItem('users');
         return (
             <div className="members-main-block-section">
-                {data.users.map(({
+                {users.map(({
                     id, photo, name, location, memberRows,
                 }) => (
                     <div className="members-main-block-section-row" key={id}>

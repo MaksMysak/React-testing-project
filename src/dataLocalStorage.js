@@ -1,6 +1,8 @@
+/* eslint-disable import/prefer-default-export */
 /* eslint-disable max-len */
 /* eslint-disable import/no-unresolved */
 // import { FaRegCheckCircle, FaPlusCircle } from 'react-icons/fa';
+// import React from 'react';
 import men from './images/aside-info/men.png';
 import plane from './images/aside-info/plane.png';
 import eye from './images/aside-info/eye.png';
@@ -176,6 +178,6 @@ const data = {
     ],
 
 };
-const dataJSON = JSON.stringify(data);
 
-localStorage.setItem('data', dataJSON);
+Object.keys(data).map(el => localStorage.setItem(el, JSON.stringify(data[el])));
+export const getStorageItem = item => JSON.parse(localStorage.getItem(item));

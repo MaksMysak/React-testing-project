@@ -1,13 +1,15 @@
+/* eslint-disable import/no-unresolved */
 /* eslint-disable react/prefer-stateless-function */
 import React from 'react';
 import { FaHome, FaCalendarAlt, FaArrowDown } from 'react-icons/fa';
 import SvgsDashboard from './svgsDashboard';
+import { getStorageItem } from '../../dataLocalStorage';
 
 class MainDashboard extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = { date: true, properties: JSON.parse(localStorage.getItem('data')) };
+        this.state = { date: true };
     }
 
     handleClick = () => {
@@ -15,7 +17,9 @@ class MainDashboard extends React.Component {
     }
 
     render() {
-        const { date, properties: { dashboardInfoToday }, properties: { dashboardInfoYesterday } } = this.state;
+        const { date } = this.state;
+        const dashboardInfoToday = getStorageItem('dashboardInfoToday');
+        const dashboardInfoYesterday = getStorageItem('dashboardInfoYesterday');
         return (
             <div className="main-dashboard">
                 <div className="main-dashboard-item">
